@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: luckynumbernamepod2
+  labels:
+    app: luckynumberapp2
+spec:
+  containers:
+  - name: luckynumber
+    image: quocit/luckynumber:latest
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "100m"
+    ports:
+      - containerPort: 80
